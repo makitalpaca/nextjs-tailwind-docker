@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/workspace:cached
-      # - nextjs-node-modules:/workspace/frontend/my-app/node_modules
+      - nextjs-node-modules:/workspace/frontend/my-app/node_modules
       
     # 擬似端末(キーボードによる入力)をコンテナに結びつける
     tty: true

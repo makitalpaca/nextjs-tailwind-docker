@@ -8,8 +8,7 @@
     "service": "nextjs-tailwind-docker",
 
     // VS Codeのワークスペースフォルダ
-    // "workspaceFolder": "/workspace/frontend/my-app",
-    "workspaceFolder": "/workspace/frontend",
+    "workspaceFolder": "/workspace/frontend/my-app",
 
     "customizations": {
       "vscode": {	
@@ -42,10 +41,9 @@
       }
     },
     
-    // "shutdownAction": "stopCompose",
-    "shutdownAction": "stopCompose"
+    "shutdownAction": "stopCompose",
 
-    // "postStartCommand": "yarn dev",
+    "postStartCommand": "yarn dev",
 
-    // "remoteUser": "node"
+    "remoteUser": "node"
 }
