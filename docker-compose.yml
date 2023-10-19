@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  nextjs-tailwind-docker:
+    container_name: nextjs-tailwind-docker
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+      # - nextjs-node-modules:/workspace/frontend/my-app/node_modules
+      
+    # 擬似端末(キーボードによる入力)をコンテナに結びつける
+    tty: true
+    # 標準入出力とエラー出力をコンテナに結びつける
+    stdin_open: true
+    ports:
+      - "3000:3000"
+
+volumes:
+  nextjs-node-modules:

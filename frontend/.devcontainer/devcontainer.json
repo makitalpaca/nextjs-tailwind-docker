@@ -1,0 +1,51 @@
+{
+    "name": "NextJS Tailwind Docker",
+
+    // docker-compose.ymlでイメージ・コンテナを作成
+    "dockerComposeFile": "../../docker-compose.yml",
+
+    // 使用するサービス
+    "service": "nextjs-tailwind-docker",
+
+    // VS Codeのワークスペースフォルダ
+    // "workspaceFolder": "/workspace/frontend/my-app",
+    "workspaceFolder": "/workspace/frontend",
+
+    "customizations": {
+      "vscode": {	
+        // リモート先のVS Codeにインストールする拡張機能
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "stylelint.vscode-stylelint",
+          "esbenp.prettier-vscode",
+          "VisualStudioExptTeam.vscodeintellicode",
+          "christian-kohler.path-intellisense",
+          "oderwat.indent-rainbow",
+          "formulahendry.auto-rename-tag",
+          "vscode-icons-team.vscode-icons",
+          "MariusAlchimavicius.json-to-ts",
+          "wix.vscode-import-cost",
+          "donjayamanne.githistory",
+          "ms-vscode-remote.remote-wsl",
+          "MS-vsliveshare.vsliveshare",
+          "mhutchie.git-graph"
+        ],
+        "settings": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+          },
+          "editor.formatOnSave": false,
+          "eslint.packageManager": "yarn",
+          "typescript.enablePromptUseWorkspaceTsdk": true
+        }
+      }
+    },
+    
+    // "shutdownAction": "stopCompose",
+    "shutdownAction": "stopCompose"
+
+    // "postStartCommand": "yarn dev",
+
+    // "remoteUser": "node"
+}
